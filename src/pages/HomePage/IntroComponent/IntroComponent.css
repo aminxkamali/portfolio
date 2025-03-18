@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap');
+
+/* استایل اصلی */
+.intro-container {
+    font-family: 'Nunito', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    padding: 60px;
+    text-align: center;
+    line-height: 1.8;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* اسم با رنگ آبی */
+.highlight-name {
+    color: #3b82f6; /* آبی زیبا */
+    font-weight: 600;
+}
+
+/* دارک مود */
+.intro-container.dark {
+    color: white;
+    background-color: transparent; /* پس‌زمینه شفاف */
+}
+
+/* لایت مود */
+.intro-container.light {
+    color: #333;
+    background-color: transparent;
+}
+@media (max-width: 1400px), (max-height: 900px) {
+    .intro-container {
+        font-size: 34px;
+    }
+}
+
+/* سایز بین 1200px تا 992px */
+@media (max-width: 1200px), (max-height: 800px) {
+    .intro-container{
+        font-size: 33px;
+    }
+}
+
+/* سایز بین 992px تا 768px */
+@media (max-width: 992px), (max-height: 700px) {
+    .intro-container{
+        font-size: 32px;
+    }
+}
+
+/* سایز بین 768px تا 576px */
+@media (max-width: 768px), (max-height: 600px) {
+    .intro-container{
+        font-size: 31px;
+    }
+}
+
+/* سایز بین 576px تا 480px */
+@media (max-width: 576px),(max-height : 500px) {
+    .intro-container{
+        font-size: 30px;
+    }
+}

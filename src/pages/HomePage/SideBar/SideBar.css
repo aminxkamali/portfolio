@@ -1,0 +1,123 @@
+.sidebar-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #151a23;
+}
+
+/* بخش عکس */
+.sidebar-profile {
+    flex: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+
+/* بخش منو */
+.sidebar-menu {
+    flex: 70%;
+    display: flex;
+    justify-content: center; /* افقی وسط‌چین */
+    align-items: center; /* عمودی وسط‌چین */
+    text-align: center; /* در صورتی که متن چند خطی شد */
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    flex-direction: column;
+    color:gray;
+}
+ul {
+    width: 100%;
+    justify-content: center; /* افقی وسط‌چین */
+    align-items: center; /* عمودی وسط‌چین */
+    text-align: center; /* در صورتی که متن چند خطی شد */
+    list-style: none; /* حذف دایره‌های پیش‌فرض */
+    padding: 0; /* حذف فاصله داخلی پیش‌فرض */
+    margin: 0; /* حذف فاصله بیرونی پیش‌فرض */
+}
+
+ul li {
+    align-items: center;
+    text-align: center;
+    width: 98%;
+    margin: 25px 0px; /* فاصله بین آیتم‌ها (دلخواه) */
+    padding: 0;
+}
+ul li button{
+    width: 100%;
+    height: 45px;
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+    color: gray;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 0;
+    border: none;
+}
+
+
+button:active {
+    background-size: 100% 100%; /* پر شدن کامل */
+}
+button:hover {
+    background-color: #278efc9d;
+    cursor: pointer;
+    color: #ffffff; /* رنگ هنگام هاور (دلخواه) */
+    transition: background-color 0.3s ease; /* انیمیشن تغییر رنگ (اختیاری) */
+    border: none;
+}
+ul li a {
+    text-decoration: none; /* حذف خط زیر لینک */
+    font-size: 20px; /* اندازه فونت */
+    font-family: 'Nunito', sans-serif; /* فونت */
+    color: inherit; /* ارث‌بری از رنگ کلی (یا می‌تونی رنگ دلخواه بدی) */
+    transition: color 0.3s ease; /* انیمیشن تغییر رنگ (اختیاری) */
+}
+
+
+
+.sidebar-profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #999999;
+}
+
+
+
+/* فوتر */
+.sidebar-footer {
+    display: flex; /* فعال‌سازی فلکس */
+    justify-content: center; /* افقی وسط‌چین */
+    align-items: center; /* عمودی وسط‌چین */
+    color: gray;
+    font-family: 'Nunito', sans-serif;
+    font-size: 8px;
+    padding: 10px 0;
+    text-align: center; /* در صورتی که متن چند خطی شد */
+}
+
+
+/* حالت دارک مود */
+.sidebar-container.dark {
+    background-color: #111827;
+}
+
+/* حالت لایت مود */
+.sidebar-container.light {
+    background-color: #f3f4f6;
+}
+.custom-divider {
+    width: 100%;
+    height: 2px; /* ضخامت خط */
+    background-color: rgba(124, 124, 124, 0.2); /* رنگ خط (خاکستری کم‌رنگ) */
+    border: none;
+}
