@@ -1,5 +1,7 @@
 import './SideBar.css'
 import profileImage from '../../../photos/profile.jpg'
+import { Link } from 'react-router-dom'; // اضافه کردن این خط
+
 function SideBar({darkMode}){
     return(
     <>
@@ -15,8 +17,9 @@ function SideBar({darkMode}){
             <div className="custom-divider"/>
             <div className="sidebar-menu">
                 <ul>
-                    <li><button><a href="#home">HOME</a></button></li>
-                    <li><button><a href="#about">ABOUT</a></button></li>
+                    <li><button><Link to="/">HOME</Link></button></li>
+                    <li><button><Link to="/AboutMe">ABOUT</Link></button></li>
+                    <li><button><Link to="/ResumePage">RESUME</Link></button></li>
                     <li><button><a href="#projects">PROJECTS</a></button></li>
                     <li><button><a href="#contact">CONTACT</a></button></li>
                 </ul>

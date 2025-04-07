@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ======= General ======= */
+.container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    transition: all 0.3s ease-in-out;
+}
+/**/
+.Header {
+    flex: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.AboutMe-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: color 0.3s ease-in-out;
+}
+
+.AboutMe-header-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* ======= Dark Mode Toggle Button ======= */
+.AboutMe-darkmode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.darkmode-toggle {
+    font-size: 28px;
+    transition: transform 0.5s ease, color 0.5s ease;
+    transform-origin: center; /* ✅ نقطه چرخش دقیقاً وسط */
+
+}
+
+.darkmode-toggle.dark {
+    color: #f1c40f;
+    transform: rotate(0deg);
+}
+
+.darkmode-toggle.light {
+    color: #34495e;
+    transform: rotate(360deg);
+}
+
+/* ======= Body ======= */
+.Body {
+    flex: 95%;
+    display: flex;
+}
+
+.SideBar {
+    flex: 16%;
+    text-align: center;
+    align-content: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.Content {
+    flex: 84%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.AboutMe-Container{
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0px 150px 0px 150px;
+}
+.AboutMe-profile-img{
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+}
+.hamburger-icon {
+    display: none; /* پیش‌فرض نمایش داده نشود */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.hamburger-icon img {
+    width: 28px;
+    height: 28px;
+}
+.AboutMe-Header{
+    text-align: left;
+    margin: 0px 150px 0px 150px;
+}
+.Resume-Downloader-button {
+    width: 175px;
+    background-color: #007bff;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s ease-in-out;
+}
+/* استایل‌های جدید برای modal عکس */
+.image-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.image-modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.enlarged-profile-img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-modal-btn:hover {
+    color: #ccc;
+}
+
+/* تغییرات برای حالت dark/light */
+.dark .image-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.light .image-modal-overlay {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.light .close-modal-btn {
+    color: #333;
+}
+
+.light .close-modal-btn:hover {
+    color: #666;
+}
+.Resume-Downloader-button:hover {
+    background-color: #0056b3;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 99;
+    transition: opacity 0.3s ease-in-out;
+}
+.AboutMe-Info-Description {
+    text-align: left;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+    list-style-type: none; /* حذف بولت‌های لیست */
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    text-align: left;
+}
+.Info-Name{
+    font-size: 26px;
+}
+.Info-Name-FullName{
+ color: #037fff;
+}
+.Info-moreInfo-title{
+    font-weight: 600;
+}
+.AboutMe-Info{
+    margin-left:20px ;
+}
+.availability{
+    color: rgb(39, 197, 24);
+}
+
+
+/* ======= Dark Mode ======= */
+.container.dark {
+    background-color: #1f2937;
+}
+
+.container.dark .Header {
+    background-color: #545454;
+    color: white;
+    border: #545454 1px solid;
+}
+
+.container.dark .AboutMe-header {
+    color: #f0f0f0;
+}
+
+.container.dark .SideBar {
+    background-color: #374151;
+    color: white;
+}
+
+.container.dark .Content {
+    background-color: #4b5563;
+    color: white;
+}
+
+/* ======= Light Mode ======= */
+.container.light {
+    background-color: #e5e7eb;
+}
+
+.container.light .Header {
+    background-color: #f9fafb;
+    color: #545454;
+    border: #d1d5db 1px solid;
+}
+
+.container.light .AboutMe-header {
+    color: #333;
+}
+
+.container.light .SideBar {
+    background-color: #e2e8f0;
+    color: #333;
+}
+
+.container.light .Content {
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+/* =================== Responsive =================== */
+
+/* سایز بین 1400px تا 1200px */
+@media (max-width: 1400px), (max-height: 900px) {
+    .AboutMe-header { font-size: 13px; }
+    .AboutMe-header-icon { width: 22px; height: 22px; }
+    .darkmode-toggle { font-size: 24px; }
+}
+
+/* سایز بین 1200px تا 992px */
+@media (max-width: 1200px), (max-height: 800px) {
+    .AboutMe-header { font-size: 12px; }
+    .AboutMe-header-icon { width: 20px; height: 20px; }
+    .darkmode-toggle { font-size: 22px; }
+
+}
+
+/* سایز بین 992px تا 768px */
+@media (max-width: 992px), (max-height: 700px) {
+    .AboutMe-header { font-size: 11px; }
+    .AboutMe-header-icon { width: 18px; height: 18px; }
+    .darkmode-toggle { font-size: 20px; }
+
+}
+
+/* سایز بین 768px تا 576px */
+@media (max-width: 768px), (max-height: 600px) {
+    .AboutMe-header { font-size: 10px; }
+    .AboutMe-header-icon { width: 16px; height: 16px; }
+    .darkmode-toggle { font-size: 18px; }
+
+}
+
+/* موبایل و خیلی کوچک */
+@media (max-width: 576px) {
+    .hamburger-icon{
+        display: block;
+    }
+    .Header{
+        position: fixed;
+        width: 95%;
+    }
+    .SideBar {
+        display: block;
+        position: fixed;
+        height: 100%;
+        left: -100%; /* مخفی پیش‌فرض */
+        width: 50%;
+        background-color: rgba(55, 65, 81, 0.95); /* شفاف تیره */
+        color: white;
+        padding: 20px;
+        transition: all 0.3s ease-in-out; /* انیمیشن باز/بسته */
+        z-index: 100;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .SideBar.open {
+        left: 0; /* وقتی باز شد */
+        transition: all 0.3s ease-in-out; /* انیمیشن باز/بسته */
+    }
+
+    .SideBar h1 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .SideBar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .SideBar ul li {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .SideBar ul li:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* محتوا در موبایل */
+    .Content {
+        flex: 100%;
+    }
+}
+
+/* Desktop Mode */
+@media (min-width: 577px) {
+    .SideBar {
+        display: block;
+        position: relative;
+        right: 0;
+        width: auto;
+    }
+    .header-right .hamburger-icon {
+        display: none;
+    }
+}
+
+/* آیکون منو */
+
+.hamburger-icon img {
+    width: 28px;
+    height: 28px;
+}
+
+/* حالت دکمه دارک مود */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* اگر خواستی وقتی سایدبار بازه بقیه صفحه ثابت بشه */
+.body-fixed {
+    overflow: hidden;
+    height: 100vh;
+}
