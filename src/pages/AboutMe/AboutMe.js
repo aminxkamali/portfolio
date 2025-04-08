@@ -32,7 +32,29 @@ function AboutMe() {
     return (
         <div className={`container ${darkMode ? 'dark' : 'light'}`}>
             <div className='Header'>
-                {/* ... کدهای هدر بدون تغییر ... */}
+            <div className="ResumePage-header">
+                    <img
+                        src="https://img.icons8.com/?size=100&id=AfM2kzPzTz6Q&format=png&color=000000"
+                        alt="ResumePage Icon"
+                        className="ResumePage-header-icon"
+                    />
+                    <span>Mohammad Amin Kamali <strong>ABOUT ME</strong></span>
+                </div>
+
+                <div className='header-right'>
+                    <div className='hamburger-icon' onClick={handleToggleSidebar}>
+                        <img width="25" height="25" src="https://img.icons8.com/ios-filled/25/menu--v1.png" alt="menu" />
+                    </div>
+                    <div className='ResumePage-darkmode' onClick={handleToggleDarkMode}>
+                        <div className={`darkmode-toggle ${darkMode ? 'dark' : 'light'}`}>
+                            {darkMode ? (
+                                <img width="25" height="25" src="https://img.icons8.com/ios/25/crescent-moon.png" alt="crescent-moon" />
+                            ) : (
+                                <img width="25" height="25" src="https://img.icons8.com/ios/25/sun--v1.png" alt="sun" />
+                            )}
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className='Body'>

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     background-color: #151a23;
-    padding:0px;
+    padding: 0rem;
 }
 
 /* بخش عکس */
@@ -13,112 +13,179 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 1.5rem 0; /* تغییر از px به rem */
 }
 
+.sidebar-profile-img {
+    width: 75%;
+    height: auto;
+    max-width: 200px; /* محدودیت حداکثر اندازه */
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.3rem solid #999999; /* تغییر از px به rem */
+}
 
 /* بخش منو */
 .sidebar-menu {
     flex: 70%;
     display: flex;
-    justify-content: center; /* افقی وسط‌چین */
-    align-items: center; /* عمودی وسط‌چین */
-    text-align: center; /* در صورتی که متن چند خطی شد */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-family: 'Nunito', sans-serif;
-    font-size: 24px;
+    font-size: 1rem; /* تغییر از px به rem */
     flex-direction: column;
-    color:gray;
+    color: gray;
 }
+
 ul {
     width: 100%;
-    justify-content: center; /* افقی وسط‌چین */
-    align-items: center; /* عمودی وسط‌چین */
-    text-align: center; /* در صورتی که متن چند خطی شد */
-    list-style: none; /* حذف دایره‌های پیش‌فرض */
-    padding: 0; /* حذف فاصله داخلی پیش‌فرض */
-    margin: 0; /* حذف فاصله بیرونی پیش‌فرض */
+    list-style: none;
+    padding: 0rem;
+    margin: 0;
 }
 
 ul li {
-    align-items: center;
-    text-align: center;
     width: 98%;
-    margin: 5px 0px 0px 0px; /* فاصله بین آیتم‌ها (دلخواه) */
-    padding: 0px;
+    margin: 0.3rem 0; /* تغییر از px به rem */
 }
-ul li button{
+
+ul li button {
     width: 100%;
-    height:45px;
-    position: relative;
-    display: inline-block;
-    align-items: center;
-    text-align: center;
-    padding: 0px;
-    font-size: 12px;
+    height: 3rem; /* تغییر از px به rem */
+    font-size: 0.5rem; /* تغییر از px به rem */
     font-family: 'Nunito', sans-serif;
     color: gray;
     background-color: transparent;
-    overflow: hidden;
-    z-index: 0;
     border: none;
 }
 
-
-button:active {
-    background-size: 100% 100%; /* پر شدن کامل */
+ul li button.light {
+    color: #333;
 }
+
 button:hover {
-    background-color: #278efc9d;
     cursor: pointer;
-    color: #ffffff; /* رنگ هنگام هاور (دلخواه) */
-    transition: background-color 0.3s ease; /* انیمیشن تغییر رنگ (اختیاری) */
-    border: none;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
 }
+
 ul li a {
-    text-decoration: none; /* حذف خط زیر لینک */
-    font-size: 20px; /* اندازه فونت */
-    font-family: 'Nunito', sans-serif; /* فونت */
-    color: inherit; /* ارث‌بری از رنگ کلی (یا می‌تونی رنگ دلخواه بدی) */
-    transition: color 0.3s ease; /* انیمیشن تغییر رنگ (اختیاری) */
+    text-decoration: none;
+    font-size: 1.2rem; /* تغییر از px به rem */
+    font-family: 'Nunito', sans-serif;
+    color: inherit;
+    transition: color 0.3s ease;
 }
-
-
-
-.sidebar-profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #999999;
-}
-
-
 
 /* فوتر */
 .sidebar-footer {
-    display: flex; /* فعال‌سازی فلکس */
-    justify-content: center; /* افقی وسط‌چین */
-    align-items: center; /* عمودی وسط‌چین */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: gray;
     font-family: 'Nunito', sans-serif;
-    font-size: 8px;
-    padding: 10px 0;
-    text-align: center; /* در صورتی که متن چند خطی شد */
+    font-size: 0.5rem; /* تغییر از px به rem */
+    padding: 0.4rem 0; /* تغییر از px به rem */
 }
 
-
-/* حالت دارک مود */
-.sidebar-container.dark {
-    background-color: #111827;
-}
-
-/* حالت لایت مود */
-.sidebar-container.light {
-    background-color: #f3f4f6;
-}
 .custom-divider {
     width: 100%;
-    height: 2px; /* ضخامت خط */
-    background-color: rgba(124, 124, 124, 0.2); /* رنگ خط (خاکستری کم‌رنگ) */
+    height: 0.125rem; /* تغییر از px به rem */
+    background-color: rgba(124, 124, 124, 0.2);
     border: none;
+}
+
+/* حالت دارک/لایت مود */
+.sidebar-container.dark {
+    background-color: #111827;
+    color: gray;
+}
+
+.sidebar-container.light {
+    background-color: #ffffff;
+}
+@media (max-width: 1400px), (max-height: 900px) {
+    ul li button {
+        height: 2.7rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+    ul li a {
+        font-size: 1rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+    .sidebar-footer {
+        font-size: 0.45rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+}
+@media (max-width: 1200px), (max-height: 800px) {
+    ul li button {
+        height: 2.4rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+    ul li a {
+        font-size: 0.8rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+    .sidebar-footer {
+        font-size: 0.4rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+}
+@media (max-width: 992px), (max-height: 600px) {
+    ul li button {
+        height: 2.1rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+    ul li a {
+        font-size: 0.6rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+    .sidebar-footer {
+        font-size: 0.35rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+}
+@media (max-width: 768px), (max-height: 500px) {
+    ul li button {
+        height: 1.8rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+    ul li a {
+        font-size: 0.4rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+    .sidebar-footer {
+        font-size: 0.3rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+}
+
+/* رسپانسیو با Media Queries */
+@media (max-width: 768px) {
+    ul li button {
+        height: 100%; /* کوچک‌تر در صفحه‌های کوچک */
+
+    }
+    ul li a {
+        font-size: 0.3rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+    .sidebar-footer {
+        font-size: 0.25rem; /* کوچک‌تر در صفحه‌های کوچک */
+    }
+    .sidebar-menu {
+        font-size: 1.2rem; /* کوچک‌تر در موبایل */
+    }
+
+    ul li a {
+        font-size: 1rem;
+    }
+
+    .sidebar-profile-img {
+        width: 60%; /* کوچک‌تر در موبایل */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-menu {
+        font-size: 1rem;
+    }
+
+    ul li button {
+        height: 2.5rem;
+        font-size: 0.65rem;
+    }
+
+    .sidebar-footer {
+        font-size: 0.4rem;
+    }
 }

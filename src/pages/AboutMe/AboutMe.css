@@ -316,6 +316,27 @@ ul li{
 
 /* موبایل و خیلی کوچک */
 @media (max-width: 576px) {
+    .Body {
+        padding-top: 52px;
+        height: calc(100vh - 60px);
+        overflow: hidden;
+    }
+    .AboutMe-Container{
+        padding-top: 120px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0px ;
+    }
+    .AboutMe-profile-img{
+        width: 100%;
+        height: auto;
+        max-width: 450px;
+        max-height: 450px;
+    }
     .hamburger-icon{
         display: block;
     }

@@ -74,6 +74,7 @@
     text-align: center;
     align-content: center;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 0px;
 }
 
 .Content {
@@ -205,7 +206,6 @@
         width: 50%;
         background-color: rgba(55, 65, 81, 0.95); /* شفاف تیره */
         color: white;
-        padding: 20px;
         transition: all 0.3s ease-in-out; /* انیمیشن باز/بسته */
         z-index: 100;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);

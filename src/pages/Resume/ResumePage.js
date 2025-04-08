@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './ResumePage.css';
 import SideBar from '../HomePage/SideBar/SideBar';
-import { Link } from 'react-router-dom'; // اضافه کردن این خط
 import Skills from './Skills';
 import ResumeList from './ResumeList';
 function ResumePage() {
@@ -29,7 +28,7 @@ function ResumePage() {
                         alt="ResumePage Icon"
                         className="ResumePage-header-icon"
                     />
-                    <span>Mohammad Amin Kamali <strong>ResumePage</strong></span>
+                    <span>Mohammad Amin Kamali <strong>Resume</strong></span>
                 </div>
 
                 <div className='header-right'>
