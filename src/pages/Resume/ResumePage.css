@@ -206,9 +206,12 @@
     .hamburger-icon{
         display: block;
     }
-    .Header{
-        position: fixed;
+    .Header {
+        position: sticky;
+        top: 0;
         width: 95%;
+        z-index: 100;
+        background-color: inherit;
     }
     .SideBar {
         display: block;
@@ -218,7 +221,6 @@
         width: 50%;
         background-color: rgba(55, 65, 81, 0.95); /* شفاف تیره */
         color: white;
-        padding: 20px;
         transition: all 0.3s ease-in-out; /* انیمیشن باز/بسته */
         z-index: 100;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);

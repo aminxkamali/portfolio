@@ -19,8 +19,8 @@ function SideBar({ darkMode }) {
                         <li><button className={`${darkMode ? 'dark' : 'light'}`}><Link to="/">HOME</Link></button></li>
                         <li><button className={`${darkMode ? 'dark' : 'light'}`}><Link to="/AboutMe">ABOUT</Link></button></li>
                         <li><button className={`${darkMode ? 'dark' : 'light'}`}><Link to="/ResumePage">RESUME</Link></button></li>
-                        <li><button className={`${darkMode ? 'dark' : 'light'}`}><a href="#projects">PROJECTS</a></button></li>
-                        <li><button className={`${darkMode ? 'dark' : 'light'}`}><a href="#contact">CONTACT</a></button></li>
+                        <li><button className={`${darkMode ? 'dark' : 'light'}`}><Link to="#projects">PROJECTS</Link></button></li>
+                        <li><button className={`${darkMode ? 'dark' : 'light'}`}><Link to="/ContactPage">CONTACT</Link></button></li>
                     </ul>
                 </div>
                 <div className="custom-divider" />

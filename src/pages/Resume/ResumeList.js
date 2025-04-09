@@ -48,8 +48,7 @@ const experiences = [
 return (
     <div className="resume-container">
     <h1 className="resume-title">Working Experience</h1>
-    
-    <section className="experience-section">
+    <div className="experience-section">
         <div className="timeline">
         {experiences.map((exp, index) => (
             <div key={index} className="experience-item">
@@ -71,7 +70,7 @@ return (
             </div>
         ))}
         </div>
-    </section>
+    </div>
     </div>
 );
 };
