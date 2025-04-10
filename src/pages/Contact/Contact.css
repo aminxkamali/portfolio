@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
 
 /* ======= General ======= */
 .container {
@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 14px;
     transition: color 0.3s ease-in-out;
 }
@@ -94,29 +94,35 @@
     padding: 20px;
 }
 .Content-header{
-    width: 100%;
-    text-align: left;
+    width: 88%;
+    text-align: center;
     padding: 0 20px;
     font-size: 24px;
     font-weight: 600;
     color: #1f2937;
     margin-bottom: 20px;
     transition: color 0.3s ease-in-out;
-
+    font-family: 'Nunito',sans-serif;
 }
 .Content-header h1{
+    font-size: 2.57rem;
+    line-height: 3.2857rem;
     text-align: left;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out;
+
 }
 .Content-body-text{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 20px;
 }
 .Contact-body-text-form{
-    flex:1;
+    flex:45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,13 +130,41 @@
     gap: 20px;
 }
 .Contact-body-text-social{
-    flex:1;
+    flex:45%;
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
     gap: 20px;
 }
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: start;
+  }
+  
+  .contact-info-item {
+    flex: 1;
+    width: 70%;
+    align-items: start;
+    border: 1px solid #191d2b;
+    background-color: #191d2b;
+    color: #ffffff;
+  }
+  
+  .contact-info-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #3f51b5;
+    font-weight: 600;
+  }
+  
+  .contact-info-item p {
+    margin: 5px 0;
+    line-height: 1.5;
+  }
 .Contact-body-text-social span{
     flex: 1;
     width: 50%;
@@ -261,6 +295,38 @@ form{
 
 /* موبایل و خیلی کوچک */
 @media (max-width: 576px) {
+    .contact-info-section {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .contact-info-item {
+        min-width: 100%;
+        margin-bottom: 10px;
+      }
+    .Content-body-text{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+    .Contact-body-text-form{
+        flex: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .Contact-body-text-social{
+        flex: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .Contact-body-text-social span{
+        width: 80%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
     .hamburger-icon{
         display: block;
     }
