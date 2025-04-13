@@ -139,7 +139,7 @@
 }
 
 .container.dark .Content {
-    background-color: #4b5563;
+    background-color: #10121b;
     color: white;
 }
 
@@ -243,7 +243,6 @@
 
     .SideBar ul li {
         padding: 12px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         font-size: 16px;
         cursor: pointer;
         transition: background-color 0.2s ease;

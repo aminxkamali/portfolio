@@ -1,24 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
 
 /* ======= General ======= */
-.container {
+.contact-container {
     display: flex;
     flex-direction: column;
     height: 100vh;
     transition: all 0.3s ease-in-out;
 }
-/**/
-.Header {
+
+.contact-header {
     flex: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    border: 1px solid transparent;
     transition: all 0.3s ease-in-out;
 }
 
-.ContactPage-header {
+.contact-header-title {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -27,15 +25,14 @@
     transition: color 0.3s ease-in-out;
 }
 
-.ContactPage-header-icon {
+.contact-header-icon {
     width: 25px;
     height: 25px;
     object-fit: contain;
     transition: transform 0.3s ease-in-out;
 }
 
-/* ======= Dark Mode Toggle Button ======= */
-.ContactPage-darkmode {
+.contact-darkmode-toggle-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,30 +43,28 @@
     transition: all 0.4s ease;
 }
 
-.darkmode-toggle {
+.contact-darkmode-toggle {
     font-size: 28px;
     transition: transform 0.5s ease, color 0.5s ease;
-    transform-origin: center; /* ✅ نقطه چرخش دقیقاً وسط */
-
+    transform-origin: center;
 }
 
-.darkmode-toggle.dark {
+.contact-darkmode-toggle.dark {
     color: #f1c40f;
     transform: rotate(0deg);
 }
 
-.darkmode-toggle.light {
+.contact-darkmode-toggle.light {
     color: #34495e;
     transform: rotate(360deg);
 }
 
-/* ======= Body ======= */
-.Body {
+.contact-body {
     flex: 95%;
     display: flex;
 }
 
-.SideBar {
+.contact-sidebar {
     flex: 16%;
     text-align: center;
     align-content: center;
@@ -77,23 +72,24 @@
     padding: 0px;
 }
 
-.Content {
+.contact-content {
     flex: 84%;
     height: 100%;
     text-align: center;
     align-content: center;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
-.Content-body{
+
+.contact-content-body {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 20px;
 }
-.Content-header{
+
+.contact-content-header {
     width: 88%;
     text-align: center;
     padding: 0 20px;
@@ -102,9 +98,10 @@
     color: #1f2937;
     margin-bottom: 20px;
     transition: color 0.3s ease-in-out;
-    font-family: 'Nunito',sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
-.Content-header h1{
+
+.contact-content-header h1 {
     font-size: 2.57rem;
     line-height: 3.2857rem;
     text-align: left;
@@ -112,92 +109,83 @@
     color: #ffffff;
     margin-bottom: 20px;
     transition: color 0.3s ease-in-out;
-
 }
-.Content-body-text{
+
+.contact-content-body-text {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
-.Contact-body-text-form{
-    flex:45%;
+
+.contact-body-text-form {
+    flex: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-.Contact-body-text-social{
-    flex:45%;
+
+.contact-body-text-social {
+    flex: 45%;
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
     gap: 20px;
 }
+
 .contact-info-section {
     display: flex;
     flex-direction: column;
     gap: 30px;
     justify-content: space-between;
     align-items: start;
-  }
-  
-  .contact-info-item {
+}
+
+.contact-info-item {
     flex: 1;
     width: 70%;
     align-items: start;
     border: 1px solid #191d2b;
     background-color: #191d2b;
     color: #ffffff;
-  }
-  
-  .contact-info-item h4 {
+}
+
+.contact-info-item h4 {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #3f51b5;
     font-weight: 600;
-  }
-  
-  .contact-info-item p {
+}
+
+.contact-info-item p {
     margin: 5px 0;
     line-height: 1.5;
-  }
-.Contact-body-text-social span{
-    flex: 1;
-    width: 50%;
-    text-align: left;
-    border: 1px solid #191d2b;
-    padding: 5px 0;
-    background-color: #191d2b;
 }
-form{
-    
+
+form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
-.Contact-body-text-form-inputs{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-.hamburger-icon {
-    display: none; /* پیش‌فرض نمایش داده نشود */
+
+.contact-hamburger-icon {
+    display: none;
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.hamburger-icon img {
+
+.contact-hamburger-icon img {
     width: 28px;
     height: 28px;
 }
-.overlay {
+
+.contact-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -208,210 +196,182 @@ form{
     z-index: 99;
     transition: opacity 0.3s ease-in-out;
 }
+.contact-header-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-
-/* ======= Dark Mode ======= */
-.container.dark {
+.contact-container.contact-dark {
     background-color: #10121b;
 }
 
-.container.dark .Header {
+.contact-container.contact-dark .contact-header {
     background-color: #545454;
     color: white;
     border: #545454 1px solid;
 }
 
-.container.dark .ContactPage-header {
+.contact-container.contact-dark .contact-header-title {
     color: #f0f0f0;
 }
 
-.container.dark .SideBar {
+.contact-container.contact-dark .contact-sidebar {
     background-color: #374151;
     color: white;
 }
 
-.container.dark .Content {
+.contact-container.contact-dark .contact-content {
     background-color: #10121b;
     color: white;
 }
 
-/* ======= Light Mode ======= */
-.container.light {
+.contact-container.contact-light {
     background-color: #e5e7eb;
 }
 
-.container.light .Header {
+.contact-container.contact-light .contact-header {
     background-color: #f9fafb;
     color: #545454;
     border: #d1d5db 1px solid;
 }
 
-.container.light .ContactPage-header {
+.contact-container.contact-light .contact-header-title {
     color: #333;
 }
 
-.container.light .SideBar {
+.contact-container.contact-light .contact-sidebar {
     background-color: #e2e8f0;
     color: #333;
 }
 
-.container.light .Content {
+.contact-container.contact-light .contact-content {
     background-color: #f3f4f6;
     color: #333;
 }
-
 /* =================== Responsive =================== */
 
-/* سایز بین 1400px تا 1200px */
 @media (max-width: 1400px), (max-height: 900px) {
-    .ContactPage-header { font-size: 13px; }
-    .ContactPage-header-icon { width: 22px; height: 22px; }
-    .darkmode-toggle { font-size: 24px; }
+    .contact-header-title { font-size: 13px; }
+    .contact-header-icon { width: 22px; height: 22px; }
+    .contact-darkmode-toggle { font-size: 24px; }
 }
 
-/* سایز بین 1200px تا 992px */
 @media (max-width: 1200px), (max-height: 800px) {
-    .ContactPage-header { font-size: 12px; }
-    .ContactPage-header-icon { width: 20px; height: 20px; }
-    .darkmode-toggle { font-size: 22px; }
-
+    .contact-header-title { font-size: 12px; }
+    .contact-header-icon { width: 20px; height: 20px; }
+    .contact-darkmode-toggle { font-size: 22px; }
 }
 
-/* سایز بین 992px تا 768px */
 @media (max-width: 992px), (max-height: 700px) {
-    .ContactPage-header { font-size: 11px; }
-    .ContactPage-header-icon { width: 18px; height: 18px; }
-    .darkmode-toggle { font-size: 20px; }
-
+    .contact-header-title { font-size: 11px; }
+    .contact-header-icon { width: 18px; height: 18px; }
+    .contact-darkmode-toggle { font-size: 20px; }
 }
 
-/* سایز بین 768px تا 576px */
 @media (max-width: 768px), (max-height: 600px) {
-    .ContactPage-header { font-size: 10px; }
-    .ContactPage-header-icon { width: 16px; height: 16px; }
-    .darkmode-toggle { font-size: 18px; }
-
+    .contact-header-title { font-size: 10px; }
+    .contact-header-icon { width: 16px; height: 16px; }
+    .contact-darkmode-toggle { font-size: 18px; }
 }
 
-/* موبایل و خیلی کوچک */
 @media (max-width: 576px) {
     .contact-info-section {
         flex-direction: column;
         gap: 20px;
-      }
-      
-      .contact-info-item {
+    }
+
+    .contact-info-item {
         min-width: 100%;
         margin-bottom: 10px;
-      }
-    .Content-body-text{
+    }
+
+    .contact-content-body-text {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 40px;
     }
-    .Contact-body-text-form{
+
+    .contact-body-text-form,
+    .contact-body-text-social {
         flex: 100%;
         width: 100%;
         justify-content: center;
         align-items: center;
     }
-    .Contact-body-text-social{
-        flex: 100%;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-    .Contact-body-text-social span{
+
+    .contact-body-text-social span {
         width: 80%;
         text-align: center;
         margin-bottom: 10px;
     }
-    .hamburger-icon{
+
+    .contact-hamburger-icon {
         display: block;
     }
-    .Header{
+
+    .contact-header {
         position: sticky;
         top: 0;
-        width: 95%;
+        width: auto;
         z-index: 100;
         background-color: inherit;
     }
-    .SideBar {
+
+    .contact-sidebar {
         display: block;
         position: fixed;
         height: 100%;
-        left: -100%; /* مخفی پیش‌فرض */
+        left: -100%;
         width: 50%;
-        background-color: rgba(55, 65, 81, 0.95); /* شفاف تیره */
+        background-color: rgba(55, 65, 81, 0.95);
         color: white;
-        transition: all 0.3s ease-in-out; /* انیمیشن باز/بسته */
+        transition: all 0.3s ease-in-out;
         z-index: 100;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     }
 
-    .SideBar.open {
-        left: 0; /* وقتی باز شد */
-        transition: all 0.3s ease-in-out; /* انیمیشن باز/بسته */
+    .contact-sidebar.open {
+        left: 0;
+        transition: all 0.3s ease-in-out;
     }
 
-    .SideBar h1 {
+    .contact-sidebar h1 {
         font-size: 18px;
         margin-bottom: 20px;
     }
 
-    .SideBar ul {
+    .contact-sidebar ul {
         list-style: none;
         padding: 0;
     }
 
-    .SideBar ul li {
+    .contact-sidebar ul li {
         padding: 12px 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         font-size: 16px;
         cursor: pointer;
         transition: background-color 0.2s ease;
     }
 
-    .SideBar ul li:hover {
+    .contact-sidebar ul li:hover {
         background-color: rgba(255, 255, 255, 0.1);
     }
 
-    /* محتوا در موبایل */
-    .Content {
+    .contact-content {
         flex: 100%;
     }
 }
 
-/* Desktop Mode */
 @media (min-width: 577px) {
-    .SideBar {
+    .contact-sidebar {
         display: block;
         position: relative;
         right: 0;
         width: auto;
     }
-    .header-right .hamburger-icon {
+
+    .contact-header-right .contact-hamburger-icon {
         display: none;
     }
-}
-
-/* آیکون منو */
-
-.hamburger-icon img {
-    width: 28px;
-    height: 28px;
-}
-
-/* حالت دکمه دارک مود */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* اگر خواستی وقتی سایدبار بازه بقیه صفحه ثابت بشه */
-.body-fixed {
-    overflow: hidden;
-    height: 100vh;
 }
